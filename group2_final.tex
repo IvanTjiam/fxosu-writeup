@@ -265,7 +265,7 @@ Once the event observers are setup and registered, we define new cases for the N
 Finally, when the 'xpcom-shutdown' event is received, the observe function will remove the observers that we setup for 'http-on-modify-request' and 'http-on-examine-response' events.
 
 \subsubsection{dom/webidl/FxOSUService.webidl}
-This file handles the defining of our exposed API. In it we define the interface that will be made accessible via the navigator object available in a js application running in a web context. We define 3 objects to help with the interface we have chosen to implement; SuccessRateObject, MemoryObject, and LatencyObject. The SuccessRateObject object holds 3 floats; rate, successes, and attempted, which records the success rate from 0 to 1 of network requests, the number of successful network requests, and the total number of attempted network requests all within an arbitrary time period, respectively. The MemoryObject object holds 2 floats; explicit and resident. Explicit shows the total size of explicit memory allocations, both at the operating system level (mmap, VirtualAlloc) and at the heap level (malloc(), calloc(), operator new). And Resident shows the resident size (RSS) of physical memory used. The LatencyObject object holds 23 floats, which we'll list and describe in a bullet point list:
+This file handles the defining of our exposed API. In it we define the interface that will be made accessible via the navigator object available in a js application running in a web context. We define 3 objects to help with the interface we have chosen to implement; SuccessRateObject, MemoryObject, and LatencyObject. The SuccessRateObject object holds 3 floats; rate, successes, and attempted, which records the success rate from 0 to 1 of network requests, the number of successful network requests, and the total number of attempted network requests all within an arbitrary time period, respectively. The MemoryObject object holds 2 floats; explicit and resident. Explicit shows the total size of explicit memory allocations, both at the operating system level (mmap, VirtualAlloc) and at the heap level (malloc(), calloc(), operator new). And Resident shows the resident size (RSS) of physical memory used. The LatencyObject object holds 21 floats and 2 integers, which we'll list and describe in a bullet point list:
 
 \begin{itemize}
   \item \textbf{navigation\_type}: the type of last non-redirect navigation
@@ -377,16 +377,22 @@ If I could do it all over again, I would spend significantly more time researchi
 
 \subsection{Pok Yan Tjiam}
 \textbf{What technical information did you learn?}\\
+I learned the architecture of Firefox OS and other technologies that may seems useful such as ServiceWorker and XPCOM. I also learned how to write API in JavaScript and how to develop Firefox add-on. Since I never use JavaScript before, it took me some time to get familiar with it.
 \\\\
 \textbf{What non-technical information did you learn?}\\
+I learned where to find information for writing web API. Mozilla Developer Network, Mozilla wiki and W3C specification contains many useful information about web API.
 \\\\
 \textbf{What have you learned about project work?}\\
+I learned the importance and usefulness of version control. We use GitHub for version control, backup and code sharing. It keeps track of every change we made to the code and helps us manage our code.
 \\\\
 \textbf{What have you learned about project management?}\\
+Time management is critical to a project's success. There was a few times we fall behind the schedule due to coursework from other classes. Sometimes a bug just took too long to solve. The project could run smoother if we can better estimate the time for each tasks.
 \\\\
 \textbf{What have you learned about working in teams?}\\
+Communication is very important. To create a successful team, we have to make sure everyone is on the same page, keep track of each other's progress and share each other's opinion for improvement. It is important to have weekly meetings with team members to discuss the current progress of the project and solve problems together.
 \\\\
 \textbf{If you could do it all over, what would you do differently?}\\
+If I could do it all over, I would spend more time on the implementation and testing on Firefox OS device instead of Firefox desktop. Although Firefox OS and Firefox desktop share the same core, some of the functions and APIs only work on Firefox OS. If we focus on Firefox OS, we can spend less time on writing unused code and rewriting functions.
 \\
 
 \subsection{Jonathan McNeil}
